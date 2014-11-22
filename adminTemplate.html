@@ -1,0 +1,22 @@
+<html>
+ <head>
+    <title>Meetup/Vote Admin</title>
+    <link type="text/css" rel="stylesheet" href="/static/main.css" />
+  </head>
+  <body>
+    <h1>Template Admin</h1>
+    <table>
+    {% for t in templates %}
+    <tr><td>{{ t.name }}</td>
+    <td><textarea width=40 height=10>{{ t.text }}</td>
+    </tr>
+    {% endfor %}
+    </table>
+    <ul class="links">
+    <li><a href="/">Back</a>
+    <li><a href="/adminVotes">Votes</a>
+    <li><a href="/adminCron">Cron</a>
+    </ul>
+  </body>
+</html>
+

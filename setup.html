@@ -1,0 +1,35 @@
+<!--
+
+# meetupvote - a google apps engine tool for voting on meetups
+# Copyright (C) 2010-2014 Michael Rice <michael@riceclan.org>
+# 
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as
+# published by the Free Software Foundation, either version 3 of the
+# License, or (at your option) any later version.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU Affero General Public License for more details.
+# 
+# You should have received a copy of the GNU Affero General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<html>
+  <head>
+  </head>
+  <body>
+  <h1>{% if new %}Welcome{% else %}Edit Nickname{% endif %}</h1>
+   {% if new %} 
+  Hi, {{ me.voter.email }}, you're using the vote system for the first time.<br>
+  I need to know what to call you.<br>
+  Tell me and I'll give you 5 votes.
+  {% endif %}
+
+  <form method="get" action="/init">
+  <input type="text" name="nick" value="{{ me.nick }}"></input>
+  <input type="submit" name="Save" value="Save"></input>
+  </form>
+  </body>
+</html>

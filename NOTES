@@ -1,0 +1,33 @@
+login with Google Account
+
+* don't use GET -- refresh causes more votes to be cast
+* protect against clicks going to the wrong place because of re-ordering
+* add multiple meetups
+* owner/admin/user roles
+* manage invites
+* add generic cron and allow cron management in the UI
+* add template management in the UI
+* add finding meetups (or invite only?)
+* add UI to disable (alternate templates)
+* add log of votes to a place
+
+/
+    if not registered go to /init
+    display list of sites and edit sites button
+    
+/init
+    get nick
+    * check invites
+    give votes
+    redirect to /
+
+if admin
+	view votes
+	add votes to people
+	add places to vote
+	vote
+else	
+	view votes
+	vote
+	add places to vote
+fi

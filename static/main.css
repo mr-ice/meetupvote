@@ -1,0 +1,56 @@
+/* vote pages simple style */
+body {
+    padding-left: 11em;
+    color: #FFFFFF;
+    font-family:  Verdana, Helvetica, Geneva, Arial,
+        SunSans-Regular, sans-serif;
+    background-color: #008080;  /* teal */
+}
+
+h1 {
+    font-family: Georgia, "Times New Roman",
+        Times, serif;
+}
+ul.links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 2em;
+    left: 1em;
+    width: 9em;
+}
+ul.links li {
+    background: white;
+    border-right: 1em solid #C0C0C0;
+    margin: 0.5em 0;
+    padding: 0.3em;
+}
+ul.links a {
+    text-decoration: none;
+}
+a:link {
+    color: blue;
+}
+a:visited {
+    color: blue;
+}
+table,tr,td {
+/*    border: 1px solid black; */
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 1em;
+}
+td.vote {
+    font-size: 20px;
+    font-style: bold;
+}
+td.place { 
+    padding: 0;
+}
+table {
+    border-collapse: collapse;
+}
+div.welcome {
+    margin-bottom: 1em;
+}

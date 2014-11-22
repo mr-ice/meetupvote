@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<!--
+# meetupvote - a google apps engine tool for voting on meetups
+# Copyright (C) 2010-2014 Michael Rice <michael@riceclan.org>
+# 
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as
+# published by the Free Software Foundation, either version 3 of the
+# License, or (at your option) any later version.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU Affero General Public License for more details.
+# 
+# You should have received a copy of the GNU Affero General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<html>
+  <head>
+    <title>Dinner Votes</title>
+    <link rel="stylesheet" href="static/main.css">
+  </head>
+  <body>
+  <h1>Dinner Votes</h1>
+    <div class="welcome">Welcome {{ me.nick }} you have {{ me.votes }} votes to cast</div>
+    <form method="get" action="/">
+    <table style="placelist">
+    {% for place in places %}
+    <tr><td class="name">{{ place.name }}</td><td class="vote">{{ place.votes }}</td>
+    <td class="place"><a href="?vote={{ place.key }}"><img border=0 height=50 width=50 src="static/50px-Arrow_Up.png"></td></tr>
+    {% endfor %}
+    </table>
+    </form>
+    <ul class="links">
+    <li><a href="/add">Edit Locations</a></div>
+    <li><a href="{{ logout }}">Logout</a></div>
+    {% if admin %}
+    <li><a href="/adminVotes">Admin</a></div>
+    {% endif %}
+    <li><a href="/">Refresh</a></div>
+    </ul>
+  </body>
+</html>

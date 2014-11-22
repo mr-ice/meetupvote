@@ -1,0 +1,4 @@
+cron:
+- description: fire internal cron
+  url: /cron
+  schedule: every 15 minutes synchronized

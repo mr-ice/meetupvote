@@ -1,0 +1,6 @@
+indexes:
+- kind: Places
+  properties:
+  - name: votes
+    direction: desc
+  - name: name

@@ -1,0 +1,43 @@
+<!--
+
+# meetupvote - a google apps engine tool for voting on meetups
+# Copyright (C) 2010-2014 Michael Rice <michael@riceclan.org>
+# 
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as
+# published by the Free Software Foundation, either version 3 of the
+# License, or (at your option) any later version.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU Affero General Public License for more details.
+# 
+# You should have received a copy of the GNU Affero General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<html>
+  <head>
+    <title>Edit Dinner Locations</title>
+    <link type="text/css" rel="stylesheet" href="/static/main.css" />
+  </head>
+  <body>
+  <h1>Edit Dinner Locations</h1>
+    <form method="get" action="/add">
+    <table>
+    {% for place in places %}
+    <tr><td>{{ place.name }}</td>
+    <td>{{ place.votes }}</td>
+    <td class="place"><a href="/add?deleteid={{ place.key }}"><img border=0 height=50 width=50 src="static/50px-RedX.png"></img></a></td>
+    {% endfor %}
+    </table>
+    {% if errormsg %}
+    <div class="error">{{ errormsg }}</div>
+    {% endif %}
+    <input type="text" name="new" length="20"></input><input type="submit" value="Add"></input>
+    </form>
+    <ul class="links">
+    <li><a href="/">Back</a>
+    </ul>
+  </body>
+</html>

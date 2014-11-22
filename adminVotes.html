@@ -1,0 +1,25 @@
+<html>
+ <head>
+    <title>Vote Admin</title>
+    <link type="text/css" rel="stylesheet" href="/static/main.css" />
+  </head>
+  <body>
+    <h1>Admin</h1>
+    <table>
+    {% for p in voters %}
+    <tr><td>{{ p.nick }}</td>
+    <td>{{ p.votes }}</td>
+    <td onclick="document.location='/admin?to={{ p.key }}&add=1'"><a href="/admin?to={{ p.key }}&add=1">+1</a></td>
+    <td onclick="document.location='/admin?to={{ p.key }}&add=5'"><a href="/admin?to={{ p.key }}&add=5">+5</a></td>
+    <td onclick="document.location='/admin?zero={{ p.key }}'"><a href="/admin?zero={{ p.key }}">0</a></td>
+    </tr>
+    {% endfor %}
+    </table>
+    <ul class="links">
+    <li><a href="/">Back</a>
+    <li><a href="/adminCron">Cron</a>
+    <li><a href="/adminTemplates">Templates</a>
+    </ul>
+  </body>
+</html>
+

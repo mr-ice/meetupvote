@@ -1,0 +1,11 @@
+Sender : dndgeekout@dndgeekout.appspotmail.com
+To : dndgeeks@googlegroups.com
+Subject : Dinner Tonight at {{ place.name }}
+The votes are in, the cheating is over, you voted (or not) and the result is
+
+     {{ place.name }} with {{ votes }} votes
+
+Dinner tonight is at {{ place.name }}, per usual custom be there by 6 or you may be
+eating alone.
+
+
